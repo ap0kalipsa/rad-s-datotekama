@@ -1,0 +1,19 @@
+<?php
+$datoteka = fopen ("datoteka.txt","a");
+
+$tekst = $_GET['upis'];
+$razmak = "       ";
+
+if ($datoteka)
+{
+
+    fwrite($datoteka, $tekst);
+    fwrite($datoteka, $razmak);
+    fclose ($datoteka);
+
+}
+
+echo "Provjerite datoteku. <br>";
+echo "Treabao bi biti upisan tekst: <br> <br>";
+echo $tekst;
+?>
